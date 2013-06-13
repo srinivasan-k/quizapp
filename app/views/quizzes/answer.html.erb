@@ -1,0 +1,33 @@
+
+
+
+<%= @quiz.question  %> 
+
+<%= @quiz.answer1 %>
+
+<%= @quiz.answer2 %>
+
+<%= @quiz.answer3 %>
+
+<%= form_tag( :action => "check", :id => @quiz.id ) do %>
+
+
+<% if @quiz.errors.any? %>
+<div id  = "error_explanation" >
+<h2> <%= pluralize(@quiz.errors.count, "error") %>  Unable to proceed further... </h2>
+<ul>
+<% @quiz.errors.full_messages.each do |msg| %>
+<li> <%= msg %> </li>
+<% end %>
+</ul>
+</div>
+<% end %>
+
+
+ <b> The correct answer is </b>
+ 
+<%= text_field :ans, params[:ans] %>
+
+<%= submit_tag("check") %>
+
+<% end %>

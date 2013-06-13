@@ -1,0 +1,12 @@
+
+
+<%= @quiz.each do |f| %>
+
+<%= f.question  %>  </br>
+
+
+<%=  link_to "Answering" , quizzes_answer_path(f) %>
+
+</br>
+
+<% end %>

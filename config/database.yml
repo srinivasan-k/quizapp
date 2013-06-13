@@ -1,0 +1,25 @@
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: quiz_development
+  username: postgres
+  password: root
+  host: localhost
+
+test:
+  adapter: postgresql
+  encoding: utf8
+  database: quiz_test
+  username: postgres
+  password: root
+  host: localhost
+  
+production:
+  adapter: postgresql
+  encoding: utf8
+  database: quiz_production
+  username: postgres
+  password: root
+  host: localhost
+  
+  

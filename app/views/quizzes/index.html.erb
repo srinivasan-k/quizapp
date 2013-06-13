@@ -1,0 +1,25 @@
+<h1>Quizs#index</h1>
+<p>Find me in app/views/quizs/index.html.erb</p>
+
+<h1>  Listing quizzes</h1>
+
+<%= @quizzes.each do  |quiz|%>
+
+ <b> Question </b>     <%= quiz.question %>
+ <b> Answer 1 </b>    <%= quiz.answer1  %>
+  <b> Answer 2 </b>   <%= quiz.answer2  %>
+  <b> Answer 3 </b>   <%= quiz.answer3  %>
+  <b>  Answer 4 </b>   <%= quiz.answer4 %>
+
+<%=  link_to "show" , quiz %>
+<%= link_to "Edit" , edit_quiz_path(quiz) %>
+<%= button_to "Delete", quiz, :method=>:delete, data: { confirm: 'Are you sure ?' } %>
+
+
+<% end %>
+
+<%= link_to "New", new_quiz_path %>
+
+
+
+<%= link_to "Visitor", quizzes_answering_path %>
